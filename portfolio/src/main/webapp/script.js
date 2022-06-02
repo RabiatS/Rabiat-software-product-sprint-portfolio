@@ -17,7 +17,7 @@
  */
 function addRandomGreeting() {
   const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Ba wo ni', 'Bonjour le monde!'];
+      ['Rock🪨','Paper📜','Scissors✂️'];
 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
@@ -25,7 +25,7 @@ function addRandomGreeting() {
   // Add it to the page.
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
-  console.log('testing js');
+  
 }
 //  js for food slide
 let slideIndex = 1;
