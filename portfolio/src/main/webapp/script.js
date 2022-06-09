@@ -15,6 +15,16 @@
 /**
  * Adds a random greeting to the page.
  */
+
+var viewportHeader = document.querySelector(".viewport-header");
+
+document.body.addEventListener("scroll", function(event) {
+  var opacity = (document.body.offsetHeight - document.body.scrollTop) / document.body.offsetHeight;
+  var scale = (document.body.offsetHeight - document.body.scrollTop) / document.body.offsetHeight;
+  document.documentElement.style.setProperty('--headerOpacity', opacity);
+  document.documentElement.style.setProperty('--headerScale', scale);
+});
+
 function addRandomGreeting() {
   const greetings =
       ['Rock🪨','Paper📜','Scissors✂️'];
@@ -57,3 +67,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 // end of food slide js
+/* */
+
+
+//fetch()
