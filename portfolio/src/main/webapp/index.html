@@ -5,33 +5,36 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire|neon">
     <title>Rabiats Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.scss">
     <script src="script.js"></script>
   </head>
-  <body>
-   <!--  <div id="content"> -->
+  <body> 
+      
+    
        
 
 <!---->
-<header class="video-header">
-    <video src="/videos/Island - 4141.mp4"  autoplay loop playsinline muted ></video>
-    <div class="viewport-header">
-      <h1>
-        Explore
-        <span>Montana</span>
-      </h1>
-    
-  </header>
+<section class="fullsize-video-bg">
+	<div class="inner">
+		<div>
+			<h1 class="font-effect-fire">Rabiat Sadiq</h1>
+      <p class="font-effect-neon">This is my portfolio </p>
+		</div>
+	</div>
+	<div id="video-viewport">
+		<video width="1920" height="1280" autoplay muted loop>
+			<source src="/videos/Island - 4141.mp4" type="video/mp4" />
+			<source src="/videos/Island - 4141.mp4" type="video/mp4" />
+		</video>
+	</div>
+</section>
+<!---->
   
-  
-  
-  <div id="circle"></div>
+<div id="content"> 
 
-
-<!-- </div>  -->
-
-      <h1 class="font-effect-fire">Rabiat Sadiq </h1>
-      <h3 class="font-effect-neon">This is my portfolio</h3>
-      <img src="/images/me happy seismiq.jpg" / width="445" height="609" alt="Picture of me">
+     <h1 class="font-effect-fire">Rabiat Sadiq </h1>
+    <h3 class="font-effect-neon">This is my portfolio</h3>
+    <!--  <img src="/images/me happy seismiq.jpg" / width="445" height="609" alt="Picture of me">-->
     
       
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
@@ -39,7 +42,7 @@
       <button onclick="addRandomGreeting()">Rock, Paper, Scissors</button>
       <div id="greeting-container"></div>
       <hr>
-
+      <img src="/images/me happy seismiq.jpg" / width="445" height="609" alt="Picture of me">
 <!-- Comment-->
   <!-- Adds description and image-->
       <header class="major">
@@ -79,13 +82,13 @@
     <!-- Full-width images with number and caption text -->
     <div class="mySlides ">
       <div class="numbertext">1 / 18</div>
-      <img src="/images/food 1.jpg"  style = "width: 70%">
+      <img src="/images/food 1.jpg"  style = "width: 100%">
       <div class="text">Cheesecake factory</div>
     </div>
   
-    <div class="mySlides ">
+    <div class="mySlides">
       <div class="numbertext">2 / 18</div>
-      <img src="/images/food 2.jpg" style="width:70%">
+      <img src="/images/food 2.jpg" style="width:100%">
       <div class="text">Travelers table</div>
     </div>
   
@@ -147,8 +150,9 @@
     <!-- Next and previous buttons -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
+ </div> 
+ <br>
+
   
   <!-- The dots/circles -->
   <div style="text-align:center">
@@ -165,7 +169,7 @@
     <span class="dot" onclick="currentSlide(11)"></span>
   </div>
     
-     
+
     
    <!-- end of image gallery -->   
   <p>I like taking picture of new food or food that I like or food that I am trying for the first time or find intriging,</p>
@@ -177,6 +181,7 @@
     <form action="Blog.html">
         <input type="submit" value="Go to blog" />
     </form>
+
 </div>
   </body>
 </html>
