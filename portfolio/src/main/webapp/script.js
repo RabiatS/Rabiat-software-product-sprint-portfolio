@@ -15,9 +15,9 @@
 /**
  * Adds a random greeting to the page.
  */
+
+
  
-
-
 function addRandomGreeting() {
   const greetings =
       ['Rock🪨','Paper📜','Scissors✂️'];
@@ -59,6 +59,18 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+//sevlet
+async function showString() {
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.text();
+  
+    const dateContainer = document.getElementById('string-container');
+    dateContainer.innerText = textFromResponse;
+
+    // Parse the response as JSON.
+const myObject = await responseFromServer.json();
+  }
 // end of food slide js
 /* */
 
