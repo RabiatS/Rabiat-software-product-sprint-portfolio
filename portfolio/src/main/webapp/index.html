@@ -75,8 +75,15 @@
     
   </ul>
 </FadeInSection>
-  <hr>
+  
+  <form action="/form-handler" method="POST">
+    <p>Enter some text here:</p>
+    <textarea name="text-input">hello world</textarea>
+    <br/>
+    <input type="submit" />
+  </form>
 
+<hr>
 <!-- end list of projects-->
 
 <!-- list of food images-->
@@ -188,19 +195,20 @@
       <button onclick="addRandomGreeting()">Rock, Paper, Scissors</button>
       <div id="greeting-container"></div>
    <hr>
-    <!--  <button onclick="showString();">
-        Get hardcoded string
-      </button>
-    -->
+   
     <a href="Contact me.html"><h3>Contact me :)</h3></a>
     <form action="Blog.html">
         <input type="submit" value="Go to blog" />
     </form>
 
       <p id="string-container"></p>
-      <p>Click <a href="/hello">here</a> to see the server response directly.</p>
-
-  
+         <button onclick="showString();">
+        Get hardcoded string
+      </button>
+    
+      <p>Click <a href="/list">here</a> to see the server response directly.</p>
+      
+     
     
     </FadeInSection> 
 </div>

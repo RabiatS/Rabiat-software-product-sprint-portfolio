@@ -62,15 +62,21 @@ function showSlides(n) {
 
 //sevlet
 async function showString() {
-    const responseFromServer = await fetch('/hello');
-    const textFromResponse = await responseFromServer.text();
-  
-    const dateContainer = document.getElementById('string-container');
-    dateContainer.innerText = textFromResponse;
+    const responseFromServer = await fetch('/list');
+    const textFromResponse = await responseFromServer.json();
 
-    // Parse the response as JSON.
-const myObject = await responseFromServer.json();
+    const myCarList = myCarlist[Math.floor(Math.random() * myCarList.length)];
+
+    const dateContainer = document.getElementById('string-container');
+    dateContainer.innerText = myCarList;
+     //console.log(myCarList);
+   
+     
   }
+  
+    
+  
+  
 // end of food slide js
 /* */
 
