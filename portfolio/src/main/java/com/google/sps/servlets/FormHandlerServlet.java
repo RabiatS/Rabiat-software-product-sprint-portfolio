@@ -19,12 +19,13 @@ public class FormHandlerServlet extends HttpServlet {
     String textValue = request.getParameter("text-input");
 
     // Print the value so you can see it in the server logs.
-    System.out.println("You submitted: " + textValue);
+    System.out.println("You submitted this : " + textValue);
 
     // Write the value to the response so the user can see it.
-    response.getWriter().println("You submitted: " + textValue);
-    response.sendRedirect("http://rsadiq-sps-summer22.appspot.com/");
+    response.getWriter().println("Your favorite movie/tv show  is  " + textValue);
+   // response.sendRedirect("http://rsadiq-sps-summer22.appspot.com/");
   }
+
 }
 
     

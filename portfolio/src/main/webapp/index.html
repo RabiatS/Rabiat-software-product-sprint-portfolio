@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style2.scss">
     <script src="script.js"></script>
   </head>
-  <body onload="showString();"> 
+  <body> 
       
     
        
@@ -77,9 +77,21 @@
 </FadeInSection>
   
   <form action="/form-handler" method="POST">
-    <p>Enter some text here:</p>
-    <textarea name="text-input">hello world</textarea>
+    <p>Enter your favorite movie:</p>
+    <textarea name="text-input">Type here</textarea>
     <br/>
+    <p>options:</p>
+      <label>
+        <input type="checkbox" name="movie" value="true">
+        Movie
+      </label>
+      <br/>
+      <label>
+        <input type="checkbox" name="Tv show" value="true">
+        TV show
+      </label>
+      <br/><br/>
+
     <input type="submit" />
   </form>
 
@@ -167,7 +179,7 @@
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
- <br>
+
 
   
   <!-- The dots/circles -->
@@ -201,12 +213,18 @@
         <input type="submit" value="Go to blog" />
     </form>
 
-      <p id="string-container"></p>
-         <button onclick="showString();">
-        Get hardcoded string
-      </button>
+    <button onclick="showList();"> Get string list</button>
+    <div id="list-container"></div>
+           
+       
+     
+      
+         <button onclick="showString();">Get hardcoded string </button>
+      <div id="string-container"></div>
     
       <p>Click <a href="/list">here</a> to see the server response directly.</p>
+      <p>Click <a href="/hello">here</a> to see the server response directly.</p>
+      <p>Click <a href="/form-handler">here</a> to see the server response directly.</p>
       
      
     

@@ -16,20 +16,6 @@
  * Adds a random greeting to the page.
  */
 
-
- 
-function addRandomGreeting() {
-  const greetings =
-      ['Rock🪨','Paper📜','Scissors✂️'];
-
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
-  
-}
 //  js for food slide
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -60,19 +46,45 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+function addRandomGreeting() {
+    const greetings =
+        ['Rock🪨','Paper📜','Scissors✂️'];
+  
+    // Pick a random greeting.
+    const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  
+    // Add it to the page.
+    const greetingContainer = document.getElementById('greeting-container');
+    greetingContainer.innerText = greeting;
+    
+  }
+
 //sevlet
+
 async function showString() {
-    const responseFromServer = await fetch('/list');
-    const textFromResponse = await responseFromServer.json();
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.text();
 
-    const myCarList = myCarlist[Math.floor(Math.random() * myCarList.length)];
-
+   
     const dateContainer = document.getElementById('string-container');
-    dateContainer.innerText = myCarList;
+    dateContainer.innerText = dateContainer;
      //console.log(myCarList);
    
      
   }
+async function showList() {
+    const responseFromServer2 = await fetch('/list');
+    const textFromResponse2 = await responseFromServer2.json();
+
+    const myCarList1 = myCarlist[Math.floor(Math.random() * myCarList.length)];
+
+    const dateContainer2 = document.getElementById('list-container');
+    dateContainer2.innerText = myCarList1;
+     //console.log(myCarList);
+    
+     
+  }
+  
   
     
   
