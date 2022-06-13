@@ -66,24 +66,26 @@ async function showString() {
     const textFromResponse = await responseFromServer.text();
 
    
-    const dateContainer = document.getElementById('string-container');
-    dateContainer.innerText = dateContainer;
+    const stringContainer = document.getElementById('string-container');
+    stringContainer.innerText = textFromResponse;
      //console.log(myCarList);
    
      
   }
 async function showList() {
     const responseFromServer2 = await fetch('/list');
-    const textFromResponse2 = await responseFromServer2.json();
+    const myCarList = await responseFromServer2.json();
 
-    const myCarList1 = myCarlist[Math.floor(Math.random() * myCarList.length)];
+    const myCarList2 = myCarList[Math.floor(Math.random() * myCarList.length)];
 
-    const dateContainer2 = document.getElementById('list-container');
-    dateContainer2.innerText = myCarList1;
-     //console.log(myCarList);
+    const listContainer = document.getElementById('list-container');
+    listContainer.innerText = myCarList2;
+     console.log(myCarList[1]);
     
      
   }
+  
+  
   
   
     
