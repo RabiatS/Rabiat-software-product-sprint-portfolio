@@ -2,56 +2,69 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire|neon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire|neon" type="text/css">
     <title>Rabiats Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.scss">
     <script src="script.js"></script>
+    
+    <link href="http://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
   </head>
-  <body>
-   <!--  <div id="content"> -->
+  <body> 
+      
+    
        
 
 <!---->
-<header class="video-header">
-    <video src="/videos/Island - 4141.mp4"  autoplay loop playsinline muted ></video>
-    <div class="viewport-header">
-      <h1>
-        Explore
-        <span>Montana</span>
-      </h1>
+<section class="fullsize-video-bg">
+	<div class="inner">
+		<div>
+            <FadeInSection>
+			<h1 class="font-effect-fire">Rabiat Sadiq</h1>
+      <p class="font-effect-neon">This is my portfolio </p>
+		</FadeInSection></div>
+	</div>
+	<div id="video-viewport">
+		<video width="1920" height="1280" autoplay muted loop>
+			<source src="/videos/Island - 4141.mp4" type="video/mp4" />
+			<!--<source src="/videos/Island - 4141.webm" type="video/webm" />-->
+		</video>
+	</div>
+</section>
+<!---->
+  
+<!--<div id="content"> -->
+ <!--   <FadeInSection>
+     <h1 class="font-effect-fire">Rabiat Sadiq </h1>
+    <h3 class="font-effect-neon">This is my portfolio</h3>
     
-  </header>
-  
-  
-  
-  <div id="circle"></div>
-
-
-<!-- </div>  -->
-
-      <h1 class="font-effect-fire">Rabiat Sadiq </h1>
-      <h3 class="font-effect-neon">This is my portfolio</h3>
-      <img src="/images/me happy seismiq.jpg" / width="445" height="609" alt="Picture of me">
     
       
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to play rock paper scissors:)</p>
-      <button onclick="addRandomGreeting()">Rock, Paper, Scissors</button>
-      <div id="greeting-container"></div>
-      <hr>
 
+ -->
+      
+    </FadeInSection>
+      <hr>
+      <FadeInSection>
+      <img src="/images/me happy seismiq.jpg" / width="445" height="609" alt="Picture of me">
+
+</FadeInSection>
 <!-- Comment-->
-  <!-- Adds description and image-->
+  <!-- Adds description and image--> 
+  <FadeInSection>
       <header class="major">
        
-       
+        <FadeInSection>
         <p>My name is <a href="https://www.rabiatsadiq.com/home">Rabiat Sadiq </a>,  I am a Computer Engineering student
              at the University of Texas at San Antonio. Also a Computer Science minor. I have an interest in Virtual Reality,
               Machine Learning and AI. I am a 19 year old nigerian american, and exceptionally curious. In my free time, I like to sleep, play games,
                sleep, and watch movies and TV Shows. I also generally enjoy learning new things and working on side projects</p>
     </header>
+   </FadeInSection>
     <!-- extra img <a href="#" class="image main"><img src="images/id photo utsa .jpg" alt="" /></a> -->
 <!-- list of projects-->
+<FadeInSection>
 <h3> List of <a href="https://www.rabiatsadiq.com/coding-projects">projects</a> I have worked on</h3>
   <ul>
     <li>Google AIY kit</li>
@@ -63,8 +76,28 @@
 
     
   </ul>
-  <hr>
+</FadeInSection>
+  
+  <form action="/form-handler" method="POST">
+    <p>Enter your favorite movie:</p>
+    <textarea name="text-input">Type here</textarea>
+    <br/>
+    <p>options:</p>
+      <label>
+        <input type="checkbox" name="movie" value="true">
+        Movie
+      </label>
+      <br/>
+      <label>
+        <input type="checkbox" name="Tv show" value="true">
+        TV show
+      </label>
+      <br/><br/>
 
+    <input type="submit" />
+  </form>
+
+<hr>
 <!-- end list of projects-->
 
 <!-- list of food images-->
@@ -79,13 +112,13 @@
     <!-- Full-width images with number and caption text -->
     <div class="mySlides ">
       <div class="numbertext">1 / 18</div>
-      <img src="/images/food 1.jpg"  style = "width: 70%">
+      <img src="/images/food 1.jpg"  style = "width: 100%">
       <div class="text">Cheesecake factory</div>
     </div>
   
-    <div class="mySlides ">
+    <div class="mySlides">
       <div class="numbertext">2 / 18</div>
-      <img src="/images/food 2.jpg" style="width:70%">
+      <img src="/images/food 2.jpg" style="width:100%">
       <div class="text">Travelers table</div>
     </div>
   
@@ -147,8 +180,9 @@
     <!-- Next and previous buttons -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
+
+
+
   
   <!-- The dots/circles -->
   <div style="text-align:center">
@@ -164,19 +198,41 @@
     <span class="dot" onclick="currentSlide(10)"></span>
     <span class="dot" onclick="currentSlide(11)"></span>
   </div>
-    
-     
-    
-   <!-- end of image gallery -->   
-  <p>I like taking picture of new food or food that I like or food that I am trying for the first time or find intriging,</p>
+</div>  
 
-   
-   
-  <a href="Contact me.html"><h3>Contact me :)</h3></a>
     
+   <!-- end of image gallery -->
+   <FadeInSection>  
+  <p>I like taking picture of new food or food that I like or food that I am trying for the first time or find intriging,</p>
+<p>Click here to play rock paper scissors:)</p>
+    
+      <button onclick="addRandomGreeting()">Rock, Paper, Scissors</button>
+      <div id="greeting-container"></div>
+   <hr>
+   
+    <a href="Contact me.html"><h3>Contact me :)</h3></a>
     <form action="Blog.html">
         <input type="submit" value="Go to blog" />
     </form>
-</div>
+
+    
+    <div id="list-container">  </div>
+    <button onclick="showList();"> Get string list</button>
+     
+     
+      
+    
+      <div id="string-container"></div>
+    <button onclick="showString();">Get hardcoded string </button>
+    
+    
+    
+      <p>Click <a href="/list">here</a> to see the server response directly.</p>
+      <p>Click <a href="/hello">here</a> to see the server response directly.</p>
+     
+     
+    
+    </FadeInSection> 
+<!--</div>-->
   </body>
 </html>

@@ -16,27 +16,6 @@
  * Adds a random greeting to the page.
  */
 
-var viewportHeader = document.querySelector(".viewport-header");
-
-document.body.addEventListener("scroll", function(event) {
-  var opacity = (document.body.offsetHeight - document.body.scrollTop) / document.body.offsetHeight;
-  var scale = (document.body.offsetHeight - document.body.scrollTop) / document.body.offsetHeight;
-  document.documentElement.style.setProperty('--headerOpacity', opacity);
-  document.documentElement.style.setProperty('--headerScale', scale);
-});
-
-function addRandomGreeting() {
-  const greetings =
-      ['Rock🪨','Paper📜','Scissors✂️'];
-
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
-  
-}
 //  js for food slide
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -52,7 +31,7 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  let i;
+  let i=1;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
@@ -66,6 +45,51 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+function addRandomGreeting() {
+    const greetings =
+        ['Rock🪨','Paper📜','Scissors✂️'];
+  
+    // Pick a random greeting.
+    const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  
+    // Add it to the page.
+    const greetingContainer = document.getElementById('greeting-container');
+    greetingContainer.innerText = greeting;
+    
+  }
+
+//sevlet
+
+async function showList() {
+    const responseFromServer2 = await fetch('/list');
+    const myCarList = await responseFromServer2.json();
+
+    const myCarList2 = myCarList[Math.floor(Math.random() * myCarList.length)];
+
+    const listContainer = document.getElementById('list-container');
+    listContainer.innerText = myCarList2;
+   
+    
+     
+  }
+  async function showString() {
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.text();
+
+   
+    const stringContainer = document.getElementById('string-container');
+    stringContainer.innerText = textFromResponse;
+     //console.log(myCarList);
+   
+     
+  }
+  
+  
+  
+    
+  
+  
 // end of food slide js
 /* */
 
