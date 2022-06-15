@@ -31,7 +31,7 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  let i;
+  let i=1;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
@@ -61,7 +61,19 @@ function addRandomGreeting() {
 
 //sevlet
 
-async function showString() {
+async function showList() {
+    const responseFromServer2 = await fetch('/list');
+    const myCarList = await responseFromServer2.json();
+
+    const myCarList2 = myCarList[Math.floor(Math.random() * myCarList.length)];
+
+    const listContainer = document.getElementById('list-container');
+    listContainer.innerText = myCarList2;
+   
+    
+     
+  }
+  async function showString() {
     const responseFromServer = await fetch('/hello');
     const textFromResponse = await responseFromServer.text();
 
@@ -72,19 +84,6 @@ async function showString() {
    
      
   }
-async function showList() {
-    const responseFromServer2 = await fetch('/list');
-    const myCarList = await responseFromServer2.json();
-
-    const myCarList2 = myCarList[Math.floor(Math.random() * myCarList.length)];
-
-    const listContainer = document.getElementById('list-container');
-    listContainer.innerText = myCarList2;
-     console.log(myCarList[1]);
-    
-     
-  }
-  
   
   
   

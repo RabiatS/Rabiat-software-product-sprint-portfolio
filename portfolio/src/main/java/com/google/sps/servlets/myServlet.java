@@ -19,16 +19,17 @@ public class myServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-    response.setContentType("text/html;");
-    response.getWriter().println("<h1>List of cars</h1>");
+    //response.setContentType("text/html;");
+    //response.getWriter().println("List of cars");
 
-   // String[] myCarList = {"Volvo", "BMW", "Ford", "<h3>Mazda</h3>"};
-   List<String> myCarList = new ArrayList<>();
-   myCarList.add("bmw");
-   myCarList.add("Toyota");
-   myCarList.add("Mazda");
+   
+  // List<String> myCarList = new ArrayList<>();
+  // myCarList.add("bmw");
+  // myCarList.add("Toyota");
+   //myCarList.add("Mazda");
    //myCarList.add("<h3>Mazda</h3>");
-
+ String[] myCarList = {"Volvo", "BMW", "Ford", "Mazda", "Hyundai", "Lamborghini", "maybach", "Porsche", "Tesla", 
+ "Kia", "Jeep", "Volkswagon", "Audi", "Fiat", "Land Rover", "Bugatti", "Jaguar", "Ferrari", "Honda", "Maserati"};
      // Convert  to JSON
     Gson gson = new Gson();
    String json = gson.toJson(myCarList);

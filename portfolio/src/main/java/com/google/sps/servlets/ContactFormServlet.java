@@ -18,8 +18,8 @@ import org.jsoup.safety.Whitelist;
 
 
 
-@WebServlet("/form-handler")
-public class FormHandlerServlet extends HttpServlet {
+@WebServlet("/Contact-Form")
+public class ContactFormServlet extends HttpServlet {
 
  
 
@@ -27,7 +27,7 @@ public class FormHandlerServlet extends HttpServlet {
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     /* String title = Jsoup.clean(request.getParameter("title"), Whitelist.none());
 
-    Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
+    
     KeyFactory keyFactory = datastore.newKeyFactory().setKind("Task");
     
     FullEntity taskEntity =
@@ -37,6 +37,7 @@ public class FormHandlerServlet extends HttpServlet {
         .build();
         datastore.put(taskEntity);
     response.sendRedirect("/index.html"); */
+
     // Get the value entered in the form.
     String textValue = request.getParameter("text-input");
 
@@ -44,12 +45,10 @@ public class FormHandlerServlet extends HttpServlet {
     System.out.println("You submitted this : " + textValue);
 
     // Write the value to the response so the user can see it.
-    response.getWriter().println("Your favorite movie/tv show  is  " + textValue);
-    response.sendRedirect("http://rsadiq-sps-summer22.appspot.com/");
+    response.getWriter().println("Your Message is:  " + textValue);
+    response.sendRedirect("http://rsadiq-sps-summer22.appspot.com/Contact%20me.html");
    
+    Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
   }
 
 }
-
-    
-
