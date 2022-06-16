@@ -25,18 +25,7 @@ public class FormHandlerServlet extends HttpServlet {
 
 @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    /* String title = Jsoup.clean(request.getParameter("title"), Whitelist.none());
-
-    Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
-    KeyFactory keyFactory = datastore.newKeyFactory().setKind("Task");
     
-    FullEntity taskEntity =
-    Entity.newBuilder(keyFactory.newKey())
-        .set("title", title)
-        .set("timestamp", timestamp)
-        .build();
-        datastore.put(taskEntity);
-    response.sendRedirect("/index.html"); */
     // Get the value entered in the form.
     String textValue = request.getParameter("text-input");
 

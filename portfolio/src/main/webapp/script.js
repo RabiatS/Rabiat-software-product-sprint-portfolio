@@ -84,6 +84,15 @@ async function showList() {
    
      
   }
+  async function showMessages() {
+    const responseFromServer2 = await fetch('/Contact-Form');
+    const message = await responseFromServer2.json();
+    const listContainer = document.getElementById('message-container');
+    listContainer.innerText = message;
+   
+    
+     
+  }
   
   
   
