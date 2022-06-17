@@ -30,6 +30,10 @@ import com.google.gson.Gson;
 public class ContactFormServlet extends HttpServlet {
 
  
+
+
+
+
 @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Sanitize user input to remove HTML tags and JavaScript.
@@ -81,11 +85,9 @@ public class ContactFormServlet extends HttpServlet {
         
       
         tasks.add(text);
-      
         tasks.add(Email);
         tasks.add(textValue);
-      
-        
+        tasks.add("\n");
       }
   
       Gson gson = new Gson();

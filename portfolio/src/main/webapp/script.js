@@ -93,7 +93,26 @@ async function showList() {
     
      
   }
-  
+  // js for translation under projects
+  function requestTranslation() {
+    const text = document.getElementById('text0').value;
+    const languageCode = document.getElementById('languageP').value;
+
+    const resultContainer = document.getElementById('result');
+    resultContainer.innerText = 'Loading...';
+
+    const params = new URLSearchParams();
+    params.append('text0', text);
+    params.append('languageCode', languageCode);
+
+    fetch('/translate', {
+      method: 'POST',
+      body: params
+    }).then(response => response.text())
+    .then((translatedMessage) => {
+      resultContainer.innerText = translatedMessage;
+    });
+  }
   
   
     

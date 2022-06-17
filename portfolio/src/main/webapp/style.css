@@ -14,7 +14,7 @@ video { display: block; width: 100%; height: auto; }
 .fullsize-video-bg .inner { display: table; width: 100%; max-width: 24em; height: 100%; margin: 0 auto; padding: 0; position: relative; z-index: 2; text-shadow: 0 1px 5px rgba(0,0,0,.5); }
 .fullsize-video-bg .inner > div { text-align: center; display: table-cell; vertical-align: middle; padding: 0 2em; }
 h1 { font-family: "Raleway", sans-serif; font-size: 3em; line-height: .9; font-weight: 900; letter-spacing: -.025em; text-transform: uppercase; margin-bottom: .5em; }
-h1 + p { font-family: "Shadows Into Light Two", cursive; font-size: 1.5em;  }
+h1 +p { font-family: "Shadows Into Light Two", cursive; font-size: 1.5em;  }
 /* video*/
 
 
@@ -32,7 +32,7 @@ h1 + p { font-family: "Shadows Into Light Two", cursive; font-size: 1.5em;  }
       }
      
    h1, h2, h3, h4, h5, h6 {
-        font-family: 'Lato', open sans-serif,  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif,  serif;
+        font-family:    sans-serif,  serif;
     }
     img:hover {
         /* Start the shake animation and make the animation last for 0.5 seconds */
@@ -228,3 +228,13 @@ h1 + p { font-family: "Shadows Into Light Two", cursive; font-size: 1.5em;  }
     top: 200px;
     background-color: #555 /* Light Black */
   }  
+  #text0 {
+    width: 500px;
+    height: 125px;
+  }
+
+  #languageP {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
