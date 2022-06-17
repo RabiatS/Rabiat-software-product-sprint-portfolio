@@ -209,3 +209,4 @@ class Stage {
   
     _raf();
   })();
+  

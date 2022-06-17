@@ -33,11 +33,12 @@ public class ContactFormServlet extends HttpServlet {
 @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Sanitize user input to remove HTML tags and JavaScript.
-    String textValue = Jsoup.clean(request.getParameter("message"), Whitelist.none());
+    String text = Jsoup.clean(request.getParameter("Name"), Whitelist.none());
+    String email = Jsoup.clean(request.getParameter("Email"), Whitelist.none());
+    String textValue = Jsoup.clean(request.getParameter("Message"), Whitelist.none());
     long timestamp = System.currentTimeMillis();
-    String email = Jsoup.clean(request.getParameter("email"), Whitelist.none());
-    String text = Jsoup.clean(request.getParameter("name"), Whitelist.none());
-   
+    
+    
 
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
@@ -51,7 +52,7 @@ public class ContactFormServlet extends HttpServlet {
         .build();
   
         datastore.put(taskEntity);
-        response.sendRedirect("/Contact-me.html");
+        response.sendRedirect("/Contact me.html");
         //response.sendRedirect("http://rsadiq-sps-summer22.appspot.com/Contact%20me.html");
   }
 
@@ -72,17 +73,17 @@ public class ContactFormServlet extends HttpServlet {
         String textValue = entity.getString("message");
         long timestamp = entity.getLong("timestamp");
         String text = entity.getString("name");
-        String Email = entity.getString("mail");
+        String Email = entity.getString("email");
   
         //Task task = new Task(id, title, timestamp);
       // String[] task = { textValue, text, Email};
         //tasks.add(task);
-        tasks.add(textValue);
+        
       
         tasks.add(text);
       
         tasks.add(Email);
-      
+        tasks.add(textValue);
       
         
       }
