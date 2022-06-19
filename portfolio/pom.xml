@@ -34,13 +34,43 @@
   <version>2.9.0</version>
 </dependency>
 
+ <!--Cloud storage-->
+<dependency>
+  <groupId>com.google.cloud</groupId>
+  <artifactId>google-cloud-storage</artifactId>
+  <version>1.113.0</version>
+</dependency>
+
 <!--To use Datastore-->
+
 <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-datastore</artifactId>
   <version>1.104.0</version>
 </dependency>
 
+<!--translate maven -->
+<dependency>
+  <groupId>com.google.cloud</groupId>
+  <artifactId>google-cloud-translate</artifactId>
+  <version>1.70.0</version>
+</dependency>
+
+
+  
+
+ 
+   <!--
+      <dependency>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>libraries-bom</artifactId>
+        <version>20.9.0</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+  -->
+  
 <!-- jsoup -->
     <dependency>
       <groupId>org.jsoup</groupId>

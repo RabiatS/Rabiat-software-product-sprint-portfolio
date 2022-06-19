@@ -30,7 +30,8 @@ public class myServlet extends HttpServlet {
    //myCarList.add("<h3>Mazda</h3>");
  String[] myCarList = {"Volvo", "BMW", "Ford", "Mazda", "Hyundai", "Lamborghini", "maybach", "Porsche", "Tesla", 
  "Kia", "Jeep", "Volkswagon", "Audi", "Fiat", "Land Rover", "Bugatti", "Jaguar", "Ferrari", "Honda", "Maserati"};
-     // Convert  to JSON
+
+    // Convert  to JSON
     Gson gson = new Gson();
    String json = gson.toJson(myCarList);
      

@@ -23,17 +23,44 @@
 <body>
     
     <hr>
-    <form class="" action="/Contact-Form" action="mailto:robbiahsadiq@gmail.com" method="post" enctype="text/plain">
+   <!--
+
+
+    <form class="" action="/Contact-Form" " method="post" enctype="text/plain">
       <label>Your name:</label>
-      <input type="text" name="yourName" value="">
+      <input type="text" name="Name" value="">
       <br>
       <label>Your Email:</label>
-      <input type="email" name="yourEmail" value="">
+      <input type="Email" name="Email" value="">
       <br>
       <label>Your Message:</label>
-      <textarea name="yourMessage" rows="10" cols="30"></textarea>
+      <textarea type="textValue" name="Message" rows="10" cols="30"></textarea>
       <input type="submit" name="">
     </form>
+    -->
+    <form method="POST" action="/Contact-Form">
+        <label>Your name:</label>
+        <input type="text" name="Name" />
+        <br>
+
+        <label>Your Email:</label>
+        <input type="text" name="Email" />
+        <br>
+        
+        <label>Your Message:</label>
+        <input type="text" name="Message" rows="10" cols="30" />
+        
+        <br>
+        
+        <br/>
+        <button>Submit</button>
+      </form>
+
+      <div id="message-container"></div>
+      <button  class="button" onclick="showMessages();">Get messages </button>
+      <br>
+      <p>Click <a href="/Contact-Form">here</a> to see the server response directly.</p>
+      
   </body>
   
   </html>

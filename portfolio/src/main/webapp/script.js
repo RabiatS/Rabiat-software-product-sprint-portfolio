@@ -84,7 +84,35 @@ async function showList() {
    
      
   }
-  
+  async function showMessages() {
+    const responseFromServer2 = await fetch('/Contact-Form');
+    const message = await responseFromServer2.json();
+    const listContainer = document.getElementById('message-container');
+    listContainer.innerText = message;
+   
+    
+     
+  }
+  // js for translation under projects
+  function requestTranslation() {
+    const text = document.getElementById('text0').value;
+    const languageCode = document.getElementById('languageP').value;
+
+    const resultContainer = document.getElementById('result');
+    resultContainer.innerText = 'Loading...';
+
+    const params = new URLSearchParams();
+    params.append('text0', text);
+    params.append('languageCode', languageCode);
+
+    fetch('/translate', {
+      method: 'POST',
+      body: params
+    }).then(response => response.text())
+    .then((translatedMessage) => {
+      resultContainer.innerText = translatedMessage;
+    });
+  }
   
   
     
