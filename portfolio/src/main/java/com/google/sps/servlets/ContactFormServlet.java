@@ -11,12 +11,12 @@ import com.google.cloud.datastore.DatastoreOptions;
 import com.google.cloud.datastore.Entity;
 import com.google.cloud.datastore.FullEntity;
 import com.google.cloud.datastore.KeyFactory;
-import com.google.cloud.datastore.Value;
+//import com.google.cloud.datastore.Value;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.jsoup.Jsoup;
-import org.jsoup.safety.Whitelist;
+import org.jsoup.safety.Safelist;
 import com.google.cloud.datastore.Query;
 import com.google.cloud.datastore.QueryResults;
 import com.google.cloud.datastore.StructuredQuery.OrderBy;
@@ -37,9 +37,9 @@ public class ContactFormServlet extends HttpServlet {
 @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Sanitize user input to remove HTML tags and JavaScript.
-    String text = Jsoup.clean(request.getParameter("Name"), Whitelist.none());
-    String email = Jsoup.clean(request.getParameter("Email"), Whitelist.none());
-    String textValue = Jsoup.clean(request.getParameter("Message"), Whitelist.none());
+    String text = Jsoup.clean(request.getParameter("Name"), Safelist.none());
+    String email = Jsoup.clean(request.getParameter("Email"), Safelist.none());
+    String textValue = Jsoup.clean(request.getParameter("Message"), Safelist.none());
     long timestamp = System.currentTimeMillis();
     
     
@@ -83,7 +83,7 @@ public class ContactFormServlet extends HttpServlet {
       // String[] task = { textValue, text, Email};
         //tasks.add(task);
         
-      
+        
         tasks.add(text);
         tasks.add(Email);
         tasks.add(textValue);
