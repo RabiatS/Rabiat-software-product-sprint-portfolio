@@ -38,11 +38,12 @@ import javax.servlet.http.HttpServletResponse;
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     LoadBalancerRegistry.getDefaultRegistry().register(new PickFirstLoadBalancerProvider());
-
+    String originalText2 = request.getParameter("textss");
     // Instantiates a client
     try (TextToSpeechClient textToSpeechClient = TextToSpeechClient.create()) {
       // Set the text input to be synthesized
-      SynthesisInput input = SynthesisInput.newBuilder().setText("Hello, World How are you today!").build();
+      SynthesisInput input = SynthesisInput.newBuilder().setText(originalText2).build();
+    //   setText("textss").build();
 
       // Build the voice request, select the language code ("en-US") and the ssml voice gender
       // ("neutral")

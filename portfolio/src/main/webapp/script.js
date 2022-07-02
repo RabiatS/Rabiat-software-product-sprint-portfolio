@@ -123,9 +123,17 @@ async function showList() {
     });
   }
  // speechSynthesis.speak(new SpeechSynthesisUtterance('Hello World'));
+async function textToSpeech() {
+
+     const responseFromServer3 = await fetch('/text-speech');
+    const message = await responseFromServer3.mpeg();
+    const textss = document.getElementById('textss').value;
+    const messageContainer = document.getElementById('speech-container');
+    messageContainer.onload= message
+//     const params = new URLSearchParams();
+//  params.append('textss', text);
   
- 
- 
+ }
   
   
 // end of food slide js
