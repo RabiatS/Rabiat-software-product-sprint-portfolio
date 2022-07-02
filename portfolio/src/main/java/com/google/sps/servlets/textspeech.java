@@ -42,14 +42,14 @@ import javax.servlet.http.HttpServletResponse;
     // Instantiates a client
     try (TextToSpeechClient textToSpeechClient = TextToSpeechClient.create()) {
       // Set the text input to be synthesized
-      SynthesisInput input = SynthesisInput.newBuilder().setText("Hello, World!").build();
+      SynthesisInput input = SynthesisInput.newBuilder().setText("Hello, World How are you today!").build();
 
       // Build the voice request, select the language code ("en-US") and the ssml voice gender
       // ("neutral")
       VoiceSelectionParams voice =
           VoiceSelectionParams.newBuilder()
               .setLanguageCode("en-US")
-              .setSsmlGender(SsmlVoiceGender.NEUTRAL)
+              .setSsmlGender(SsmlVoiceGender.FEMALE)
               .build();
 
       // Select the type of audio file you want returned
