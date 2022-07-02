@@ -2,10 +2,14 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+ 
+ 
 
   <groupId>com.google.sps</groupId>
   <artifactId>portfolio</artifactId>
-  <version>1</version>
+  <version>1</version> 
+
+ 
 
   <properties>
     <!-- Java 11 -->
@@ -19,76 +23,94 @@
     <googleCloudProjectId>rsadiq-sps-summer22</googleCloudProjectId>
   </properties>
 
+
+<dependencyManagement>
   <dependencies>
+    <dependency>
+      <groupId>com.google.cloud</groupId>
+      <artifactId>libraries-bom</artifactId>
+      <version>25.4.0</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+ </dependencies>
+</dependencyManagement>
+
     <!-- Java Servlets API -->
+     <dependencies>
+
+
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
-      <version>4.0.1</version>
+     <version>4.0.1</version>
     </dependency>
 
         <!--To use Gson,-->
-<dependency>
-  <groupId>com.google.code.gson</groupId>
-  <artifactId>gson</artifactId>
+    <dependency>
+     <groupId>com.google.code.gson</groupId>
+     <artifactId>gson</artifactId>
   <version>2.9.0</version>
-</dependency>
+   </dependency>
 
  <!--Cloud storage-->
-<dependency>
+  <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-storage</artifactId>
-  <version>1.113.0</version>
-</dependency>
+ <version>1.113.0</version>
+  </dependency>
 
 <!--To use Datastore-->
 
-<dependency>
+ <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-datastore</artifactId>
-  <version>1.104.0</version>
-</dependency>
+ <version>1.104.0</version>
+ </dependency>
 
 <!--translate maven -->
-<dependency>
+ <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-translate</artifactId>
-  <version>1.70.0</version>
-</dependency>
+ <version>1.70.0</version>
+ </dependency>
+  
+      
 
+       
+  
+  <!-- text to speech -->
+  <dependency>
+    <groupId>com.google.cloud</groupId>
+    <artifactId>google-cloud-texttospeech</artifactId>
+    <version>2.3.1</version>
+  </dependency>
 
   
 
- 
-   <!--
-      <dependency>
-        <groupId>com.google.cloud</groupId>
-        <artifactId>libraries-bom</artifactId>
-        <version>20.9.0</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-
-  -->
-  
-<!-- jsoup -->
+ <!-- jsoup -->
    <dependency>
     <groupId>org.jsoup</groupId>
     <artifactId>jsoup</artifactId>
-    <version>1.14.2</version>
-</dependency>
+   <version>1.14.2</version>
+   </dependency>
+
+
     <!-- Jetty -->
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-server</artifactId>
-      <version>${jetty.version}</version>
+     <version>${jetty.version}</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-annotations</artifactId>
       <version>${jetty.version}</version>
     </dependency>
-  </dependencies>
+
+   
+ </dependencies>
+
 
   <build>
     <plugins>
@@ -118,7 +140,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>3.2.4</version>
+       <version>3.2.4</version> 
         <executions>
           <execution>
             <phase>package</phase>
@@ -150,10 +172,10 @@
       <plugin>
         <groupId>com.google.cloud.tools</groupId>
         <artifactId>appengine-maven-plugin</artifactId>
-        <version>2.2.0</version>
+      <version>2.2.0</version> 
         <configuration>
           <projectId>${googleCloudProjectId}</projectId>
-          <version>1</version>
+          <version>1</version> 
         </configuration>
       </plugin>
     </plugins>

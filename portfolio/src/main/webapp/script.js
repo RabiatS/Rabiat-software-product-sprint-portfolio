@@ -93,6 +93,15 @@ async function showList() {
     
      
   }
+
+//   function textToSpeech() {
+//     const responseFromServer2 = await fetch('/text-speech');
+//     const message = await responseFromServer2.formData();
+//     const speechContainer = document.getElementById('speech-container');
+//     speechContainer.innerText = message;
+    
+
+// }
   // js for translation under projects
   function requestTranslation() {
     const text = document.getElementById('text0').value;
@@ -113,9 +122,10 @@ async function showList() {
       resultContainer.innerText = translatedMessage;
     });
   }
+ // speechSynthesis.speak(new SpeechSynthesisUtterance('Hello World'));
   
-  
-    
+ 
+ 
   
   
 // end of food slide js
