@@ -129,7 +129,7 @@ async function textToSpeech() {
     const message = await responseFromServer3.mpeg();
     const textss = document.getElementById('textss').value;
     const messageContainer = document.getElementById('speech-container');
-    messageContainer.onload= message
+    messageContainer.onclick= message
 //     const params = new URLSearchParams();
 //  params.append('textss', text);
   
